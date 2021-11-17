@@ -89,7 +89,7 @@ public class ReactController {
         String id = Integer.toString(id2 + 1);
         Comments comment = new Comments(id, data.getPage(), data.getName(), data.getComment());
         commentRepository.save(comment);
-        return ResponseEntity.ok(commentRepository.findAll(Sort.by(Sort.Direction.DESC, "id")));
+        return ResponseEntity.ok(id);
     }
 
     @RequestMapping(path = "/comment/{id}", method = RequestMethod.DELETE)
